@@ -1,0 +1,15 @@
+# Replit reads this to know what to run. Dependencies are installed first so a
+# fresh upload works with nothing but the Run button.
+run = "pip install -q -r userbot/requirements.txt && python userbot/dice.py"
+entrypoint = "userbot/dice.py"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "pip install -q -r userbot/requirements.txt && python userbot/dice.py"]
+
+# Replit sets PORT itself; dice.py reads it and binds 0.0.0.0 when it is present.
+[[ports]]
+localPort = 3000
+externalPort = 80
