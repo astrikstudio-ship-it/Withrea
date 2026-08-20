@@ -1,6 +1,0 @@
-userbot/.env
-userbot/*.session
-userbot/cards.json
-userbot/queue.json
-userbot/settings.json
-userbot/__pycache__/
